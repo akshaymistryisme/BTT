@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet"
+        data-src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="preconnect" data-src="https://fonts.googleapis.com">
+    <link rel="preconnect" data-src="https://fonts.gstatic.com" crossorigin>
+    <link data-src="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* Fixed sidenav, full height */
+        .sidenav {
+            height: 100%;
+            width: 290px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+            padding: 5px;
+        }
+
+        /* Style the sidenav links and the dropdown button */
+        .sidenav a,
+        .dropdown-btn {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 16px;
+            color: #e1e1e1;
+            display: block;
+            border: none;
+            background: none;
+            width: 100%;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+            padding: 1rem 1rem;
+            margin: 0.2rem;
+        }
+
+        /* On mouse-over */
+        .sidenav a:hover,
+        .dropdown-btn:hover {
+            color: #3dbd99;
+            background-color: #262626;
+        }
+
+        /* Main content */
+        .main {
+            margin-left: 300px;
+            /* Same as the width of the sidenav */
+            font-size: 20px;
+            /* Increased text to enable scrolling */
+            padding: 0px 0px;
+        }
+
+        /* Add an active class to the active dropdown button */
+        .active {
+            background-color: #262626;
+            color: white;
+        }
+
+        /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+        .dropdown-container {
+            display: none;
+            background-color: #262626;
+            padding-left: 8px;
+        }
+
+        /* Optional: Style the caret down icon */
+        .fa-caret-down {
+            float: right;
+            padding-right: 8px;
+        }
+
+        /* Some media queries for responsiveness */
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: aliceblue;
+        }
+
+        .logo h1 {
+            margin-right: 10px;
+            font-size: 25px;
+            color: #3dbd99;
+        }
+
+        .logo p {
+            margin-right: 10px;
+            font-size: 20px;
+            color: #ffffff;
+        }
+
+        .back {
+            padding: 10px;
+            border-radius: 10px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <a href="app.html" class="back"><i class="fa fa-arrow-left" aria-hidden="true"
+                style="margin-right: 5px;"></i>Back</a>
+        <div class="logo">
+            <h1>Module wise Testing</h1>
+        </div>
+
+
+
+        <a data-src="https://docs.google.com/spreadsheets/d/1G45xmcr-TaSYEFoO5IJZc-Jm7HZKxO0ZapuxNnr7QpE/edit?usp=drive_link">Registration</a>
+
+        <button class="dropdown-btn">Account
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a data-src="https://docs.google.com/spreadsheets/d/1TBGOZP7m3-iNBKU-vZbfBIXfByXXHZ3CTp7V_QRVrc8/edit?usp=drive_link">My profile</a>
+            <a data-src="https://docs.google.com/spreadsheets/d/17ZA1EjUb0LQJ15WFDtbl8sS2XcgPSXOI1cT4pSly3Ow/edit?usp=drive_link">My EV</a>
+            <a data-src="https://docs.google.com/spreadsheets/d/1H0kayBtPRkBpg4t0q-gyfCbcCYiVymooWJ-xvfdWbng/edit?usp=drive_link">My Favourite Spots</a>
+            <a data-src="https://docs.google.com/spreadsheets/d/1IvbSqA5nRnChFBFhDNL4LOX6ALR2QuAoBMdk615iCPs/edit?usp=drive_link">My Bookings</a>
+            <a data-src="https://docs.google.com/spreadsheets/d/1MN6LdlwH600u9avYQAE1TFRyIj5O-zS7oDo4PQ3rPjE/edit?usp=drive_link">My Wallet</a>
+            <a data-src="https://docs.google.com/spreadsheets/d/1wD0RHsaofyQAdEx5OAkVp7BCqBRlnA0-wDSnLAimo3I/edit?usp=drive_link">ChargeZone Club</a>
+        </div>
+
+        <button class="dropdown-btn">Settings
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+            <a data-src="https://docs.google.com/spreadsheets/d/1ayo8zBWHNf958Q5UV4zGfRFaw8ueGDSOIs2LVDg7Fic/edit?usp=drive_link">Nofication Settings</a>
+            <a data-src="https://docs.google.com/spreadsheets/d/1Nl2D37mRsMkFJ-7dL3TwUagurixnqW1G-pO8dQSpIJI/edit?usp=drive_link">Privercy Policy</a>
+            <a data-src="https://docs.google.com/spreadsheets/d/1U4AU5b5cRQE-WZ1QWBF5uswBmHb8asGZv6Rd_0X-Hv8/edit?usp=drive_link">Contact Us</a>
+            <a data-src="https://docs.google.com/spreadsheets/d/1LG1ixzI_6x2NIi4CK8F48mi4g3dVxCNgprErfWKs4W4/edit?usp=drive_link">Help</a>
+        </div>
+
+        
+        <a data-src="https://docs.google.com/spreadsheets/d/1B9FhQ6k7YWNZ2AcK-P3GkVyPyOZOtlnTleAjr7ATxGU/edit?usp=drive_link">Home Page</a>
+    
+        <a data-src="https://docs.google.com/spreadsheets/d/13yzixutGIzaglxM91V9tmGKFLuK-WSxl79Hi-bvWFf0/edit?usp=drive_link">Calender Icon</a>
+        <a data-src="https://docs.google.com/spreadsheets/d/1o0UFQ4HMaTsR73Q6zrHtRWpoonOzKd6bt1jpSgf35d4/edit?usp=drive_link">QR Code Icon</a>
+        <a data-src="https://docs.google.com/spreadsheets/d/1b57wEmyghB3sJCnV_bcrALlBlmY6atKMY84dcx0CpSA/edit?usp=drive_link">Search Icon</a>
+        <a data-src="https://docs.google.com/spreadsheets/d/13yzixutGIzaglxM91V9tmGKFLuK-WSxl79Hi-bvWFf0/edit?usp=drive_link">Notification Icon</a>
+
+    </div>
+
+    <div class="main">
+        <iframe id="videoFrame" width="100%" height="930px" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+
+
+
+        var links = document.querySelectorAll("a[data-src]");
+        var frame = document.getElementById("videoFrame");
+
+        // Loop through each link and add a click event listener
+        for (var i = 0; i < links.length; i++) {
+            links[i].addEventListener("click", function (event) {
+                event.preventDefault(); // Prevent the link from navigating to its default URL
+                var src = this.getAttribute("data-src"); // Get the value of the data-src attribute
+                frame.src = src; // Set the iframe source to the value of the data-src attribute
+            });
+        }
+    </script>
+
+</body>
+
+</html>

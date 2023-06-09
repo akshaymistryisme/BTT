@@ -1,306 +1,89 @@
-<!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" data-src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-<link rel="preconnect" data-src="https://fonts.googleapis.com">
-<link rel="preconnect" data-src="https://fonts.gstatic.com" crossorigin>
-<link data-src="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTT Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <style>
+        a{
+            text-decoration: none;
+        }
+        body {
+            display: flex;
+            /* flex-direction: column; */
+            justify-content: center;
+            align-items: center;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f6f4f2;
+            text-decoration: none;
+        }
 
-<style>
-*
-{
-    font-family: 'Roboto', sans-serif;
-}
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: red; */
+        }
 
-body {
-font-family: 'Roboto', sans-serif;
-}
+        .child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 10px;
+            margin: 20px;
+            width: 300px;
+            height: 300px;
+            background-color: #e2dfdc;
+            border-radius: 40px;
+            transition: 0.2s;
+            text-decoration: none;
+            color: #000000;
+        }
 
-/* Fixed sidenav, full height */
-.sidenav {
-  height: 100%;
-  width: 290px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 20px;
-  padding: 5px;
-}
+        .child:hover {
+            box-shadow: 0px 0px 20px rgba(118, 118, 118, 0.096);
+            cursor: pointer;
+        }
 
-/* Style the sidenav links and the dropdown button */
-.sidenav a, .dropdown-btn {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 16px;
-  color: #e1e1e1;
-  display: block;
-  border: none;
-  background: none;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
-  padding: 1rem 1rem;
-  margin: 0.2rem;
-}
+        .child:hover i {
+            color: #3dbd99;
 
-/* On mouse-over */
-.sidenav a:hover, .dropdown-btn:hover {
-  color: #3dbd99;
-  background-color: #262626;
-}
+        }
 
-/* Main content */
-.main { 
-  margin-left: 300px; /* Same as the width of the sidenav */
-  font-size: 20px; /* Increased text to enable scrolling */
-  padding: 0px 0px;
-}
+        .child:hover h1 {
+            color: #3dbd99;
+            transition: 0.2s;
+        }
 
-/* Add an active class to the active dropdown button */
-.active {
-    background-color: #262626;
-  color: white;
-}
+        .child i {
+            font-size: 100px;
+            transition: 0.2s;
+        }
 
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-.dropdown-container {
-  display: none;
-  background-color: #262626;
-  padding-left: 8px;
-}
-
-/* Optional: Style the caret down icon */
-.fa-caret-down {
-  float: right;
-  padding-right: 8px;
-}
-
-/* Some media queries for responsiveness */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-.logo
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: aliceblue;
-}
-
-.logo h1
-{
-    margin-right: 10px;
-    font-size: 50px;
-    color: #3dbd99;
-}
-
-.logo p
-{
-    margin-right: 10px;
-    font-size: 20px;
-    color: #ffffff;
-}
-
-</style>
+        .child h1 {
+            font-size: 30px;
+        }
+    </style>
 </head>
+
 <body>
+    <div class="main">
 
-<div class="sidenav">
-    <div class="logo">
-        <h1>#B</h1>
-       <p>Bug Tracking Tool</p> 
+        <a href="cms.html">
+            <div class="child">
+                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                <h1>CZ CMS</h1>
+            </div>
+        </a>
+        <a href="app.html">
+            <div class="child">
+                <i class="fa fa-mobile-phone"></i>
+                <h1>CZ Mobile App</h1>
+            </div>
+        </a>
     </div>
-  <a data-src="https://docs.google.com/spreadsheets/d/1oC4iLi35RtntCx5UlxKZQluFZ-l5L4cl/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true">Tenant Management</a>
-
-  <button class="dropdown-btn">Master 
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-container">
-    <a data-src="https://docs.google.com/spreadsheets/d/1cyoC_a7nq06CaFR9HaQqyps6F-lUPzqN/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Region Management</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/18hlaaLPivZPTv8Xgtz-8UTLiYMMQiH3W/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Vehicle Management</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/136WCn97nTnhRQY2jPZ_SGUqwwkFQCxR9/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Charging Station Management</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/1oXZ4eKxGnKMABJOTwzcgyaNOCF9x7HBV/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Template</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/1J4x5fx14g9AFWuBm_6tp899eJimMK_b3/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Charger Management</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/1rLTSzbjWJNpzDqBWw03ZmtfTIeLO2Rhx/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Miscellaneous</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/1l2KQV8TsgpNf7HH9XL-cqtTvXOenznQE/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Access Management</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/11nFQIXMUiQFPcrNUGH8EpediPjMmPGtN/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Master Setting</a>
-  </div>
-
-
-  <a data-src="https://docs.google.com/spreadsheets/d/12FjZr1yLmaw4CBVoov4PIc95HWhbueOy/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true">Dashboard</a>
-
-  <a data-src="https://docs.google.com/spreadsheets/d/1AoU1doAQgbozBBbeISgPlEWNHSd2PlUi/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true">Charger Status</a>
-
-  <a data-src="https://docs.google.com/spreadsheets/d/1iDwhVc1-xu5PkqsaRO-Yxfol3rwUNM66/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true">Station & Charger</a>
-
-  <button class="dropdown-btn">Add Ones 
-    <i class="fa fa-caret-down" id="btn"></i>
-  </button>
-  <div class="dropdown-container">
-    <a data-src="https://docs.google.com/spreadsheets/d/1er2D4RxN24Oi33TGYkcosMVA7RW3CUBw/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Add Charging Station</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/1hd_8UiKaM3-tOlr8iF51iZvGVQMv-68E/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Add Charger</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/1r5MhkbZAwBJmtlBkZaKLo9-eX-0Rt7rA/edit?usp=share_link&rtpof=true&sd=true
-    ">Add Vehicle</a>
-  </div>
-
-  <button class="dropdown-btn">Tariff Management 
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-container">
-    <a data-src="https://docs.google.com/spreadsheets/d/1kZ8piCFf_5pWve9EbcqP3eoHq1IQrSyl/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Tariffs</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/1X1HZIP5FnPmla_qawF3DrAmyJ1YxQN4C/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">User Group Management</a>
-  </div>
-
-  <a data-src="https://docs.google.com/spreadsheets/d/1xJ-RLEe_5BhiEIlBptMpRABU0R8e0oJb/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true">Customer Management</a>
-
-  <a data-src="https://docs.google.com/spreadsheets/d/1cZR3VwNY6xyyCr5rm6NDayi_iRNFdGyq/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true">Billing & Invoicing</a>
-
-  <a data-src="https://docs.google.com/spreadsheets/d/1mS0HtEI7Iy9AN7jafvwI_kjPiuoE11JY/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true">Vehicle Management</a>
-
-  <button class="dropdown-btn">Reports 
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-container">
-    <a data-src="https://docs.google.com/spreadsheets/d/1zVp0H4fwr7CBImboH75kgbbOECusyE0x/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Capacity Utilization</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/1cpv0tSxQE6qXBZn4Lh79N3DnG_yuhUyF/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Station Unit Consuption</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/1lEB_ooLBBmFSMxJsSiwkosDGG_Niqd3K/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Charging History Reports</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/1Bbh0S-RTcqNKqtmwpbH5ruQQQLEFTBeG/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">B2B Station Charging History</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/1mz9lytNwb4jf7raaRGDXAXvWKP-hSRuI/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">B2C Station Charging History</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/1JyGx57lpFGqJMuZ8Uog3LK6gFa2VRa8a/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Wallet Transaction Reports</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/15s2_0c9tvvgvIMqxCf_-HmpLPHrqzKTh/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Money Transaction PG Reports</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/1dNzldEG4Px2cZckUq3E84KWRFUMZUSf2/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">App User Details List</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/11L51b-vu1SslnrvF4jKW5JPniFUkq5oI/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Most Vehicle Charge List</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/1WQVKd6UQIp57WQ1XqCRpYs-SIYILbr9C/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Booking History</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/1HPoEEEHaWJW2rk_d_6ruaESO0aaC58-G/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">User Charging History</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/14kAtwNSoLe-fxDQUgbYEfU3NmXmIqU8R/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Station Charging Summary</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/1PGZZkf6JZX-TIc5XjFvxZJep5ApmChFg/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Booking Summary Report</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/18v8w6IqdMQjotFfvIbekkU8IvOLkTBBq/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">AC Meter Reading Report</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/11HekhGrh9nnV_8X4eeS7utmggH8wLV__/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Invoices Report</a>
-  </div>
-
-  <button class="dropdown-btn">Scheduling
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-container">
-    <a data-src="https://docs.google.com/spreadsheets/d/1uaE2JhMSOhfItqO4GT7Z6E9YIrwJwP_C/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Public Users</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/1sLrqvtkiIsonCASAPUjJRX_8z5_39dEm/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Private Reserve Slots</a>
-  </div>
-
-  <button class="dropdown-btn">RFID
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-container">
-    <a data-src="https://docs.google.com/spreadsheets/d/1r8a_h6vUN7cHHnJhM4I8x86m6F53MJPM/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">RFID Master</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/10Rr6Pp6M3Sw6sZxB8yk7UeRS2MEBhzBk/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">RFID Requests</a>
-  </div>
-
-  <a data-src="https://docs.google.com/spreadsheets/d/15zHKsIqk8jjWwws2yehwOhRcwvZIwhKr/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true">Activity Log</a>
-
-  <button class="dropdown-btn">Notification
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-container">
-    <a data-src="https://docs.google.com/spreadsheets/d/12_mebYCsbKSFMkmuxs1kq-VZtClaoGcb/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">General</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/1Razb9I52RWENXKs5uUjCn5vZZml6_Udy/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">Update Firmware</a>
-  </div>
-
-  <a data-src="https://docs.google.com/spreadsheets/d/1XrfjpJlm_t8SuqdKzSco7nzMv4c9rtUJ/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true">Offers</a>
-
-  <button class="dropdown-btn">Partner Management
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-container">
-    <a data-src="https://docs.google.com/spreadsheets/d/1DjxRl_l0inZlNSPm1lJOi6UNuDP7IAL0/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">CPO</a>
-    <a data-src="https://docs.google.com/spreadsheets/d/1sromtxpdYFjQYlNpZtkt1NekIRv8idrj/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true
-    ">EMSP</a>
-  </div>
-
-  <a data-src="https://docs.google.com/spreadsheets/d/1MGiYCqEfnUPWqj8QoQZn-VAQLg1G94kW/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true">Chargecoin Management</a>
-  <a data-src="https://docs.google.com/spreadsheets/d/1Ti69NNlsqzkcUHgpHFCFECbyo8zissBu/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true">Update App Settings</a>
-  <a data-src="https://docs.google.com/spreadsheets/d/1BO692OQYrjgkBHRiVPAByksZDQc0Rs32/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true">Settings</a>
-  <a data-src="https://docs.google.com/spreadsheets/d/1VVulpgcZe8dPaVMkKgTuKq_q6EhCYdth/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true">LogIn</a>
-  <a data-src="https://docs.google.com/spreadsheets/d/18xXN6tN9r2MX4SWQkeFH8vqYhSiIzYNX/edit?usp=share_link&ouid=110595813382737510913&rtpof=true&sd=true">LogOut</a>
-</div>
-
-<div class="main">
-	<iframe id="videoFrame" width="100%" height="930px" src="" frameborder="0" allowfullscreen></iframe>
-</div>
-
-<script>
-/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-var dropdown = document.getElementsByClassName("dropdown-btn");
-var i;
-
-for (i = 0; i < dropdown.length; i++) {
-  dropdown[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.display === "block") {
-      dropdownContent.style.display = "none";
-    } else {
-      dropdownContent.style.display = "block";
-    }
-  });
-}
-
-
-
-var links = document.querySelectorAll("a[data-src]");
-		var frame = document.getElementById("videoFrame");
-
-		// Loop through each link and add a click event listener
-		for (var i = 0; i < links.length; i++) {
-			links[i].addEventListener("click", function(event) {
-				event.preventDefault(); // Prevent the link from navigating to its default URL
-				var src = this.getAttribute("data-src"); // Get the value of the data-src attribute
-				frame.src = src; // Set the iframe source to the value of the data-src attribute
-			});
-		}
-</script>
-
 </body>
-</html> 
+
+</html>
