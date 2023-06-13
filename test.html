@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url(bg.jpg);
+        }
+
+        .main {
+
+            background: rgba(217, 179, 179, 0.35);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4.5px);
+            -webkit-backdrop-filter: blur(4.5px);
+            border-radius: 30px;
+            /* border: 1px solid rgba(255, 255, 255, 0.18); */
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            transition: 0.3s;
+            position: absolute;
+            top: 30%;
+        }
+
+        .main div {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            opacity: 0;
+
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".child1").hover(function () {
+                $(".main").css({ "transform": "rotateY(50deg)", "box-shadow": "10px 0px 40px rgba(31, 38, 135, 0.37)" });
+            });
+            $(".child2").hover(function () {
+                $(".main").css({ "transform": "rotateX(-50deg)", "box-shadow": "0px 10px 40px rgba(31, 38, 135, 0.37)" });
+            });
+            $(".child3").hover(function () {
+                $(".main").css({ "transform": "rotateY(-50deg)", "box-shadow": "-10px 0px 40px rgba(31, 38, 135, 0.37)" });
+            });
+            $(".child7").hover(function () {
+                $(".main").css({ "transform": "rotateY(-30deg)", "box-shadow": "10px 0px 40px rgba(31, 38, 135, 0.37)" });
+            });
+            $(".child8").hover(function () {
+                $(".main").css({ "transform": "rotateX(-30deg)", "box-shadow": "10px 0px 40px rgba(31, 38, 135, 0.37)" });
+            });
+            $(".child9").hover(function () {
+                $(".main").css({ "transform": "rotateY(30deg)", "box-shadow": "10px 0px 40px rgba(31, 38, 135, 0.37)" });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="child1"></div>
+        <div class="child2"></div>
+        <div class="child3"></div>
+        <div class="child4"></div>
+        <div class="child5"></div>
+        <div class="child6"></div>
+        <div class="child7"></div>
+        <div class="child8"></div>
+        <div class="child9"></div>
+    </div>
+
+</body>
+
+</html>

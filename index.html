@@ -4,26 +4,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BTT Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mailtoharshit/San-Francisco-Font-/sanfrancisco.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@700&display=swap" rel="stylesheet">
 
     <style>
-        a{
+        a {
             text-decoration: none;
         }
+
         body {
             display: flex;
-            /* flex-direction: column; */
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             font-family: 'Roboto', sans-serif;
-            background-color: #f6f4f2;
             text-decoration: none;
+            background-image: url(bg.jpg);
+            background-size: 100%;
+            margin-top: 12%;
         }
 
         .main {
             display: flex;
             justify-content: center;
             align-items: center;
+            background: rgba(255, 255, 255, 0.129);
+            /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+            backdrop-filter: blur(50px);
+            -webkit-backdrop-filter: blur(4.5px);
+            padding: 2vw;
+            border-radius: 50px;
+        }
+
+
+        .main2 {
+            display: none;
+            justify-content: center;
+            align-items: center;
             /* background-color: red; */
+            flex-wrap: wrap;
+            flex-direction: column;
+            margin-top: 20px;
         }
 
         .child {
@@ -35,37 +58,127 @@
             margin: 20px;
             width: 300px;
             height: 300px;
-            background-color: #e2dfdc;
-            border-radius: 40px;
-            transition: 0.2s;
+            border-radius: 50px;
             text-decoration: none;
-            color: #000000;
-        }
-
-        .child:hover {
-            box-shadow: 0px 0px 20px rgba(118, 118, 118, 0.096);
+            color: #ffffff;
+            transition: 0.5s;
             cursor: pointer;
         }
 
-        .child:hover i {
-            color: #3dbd99;
 
+        .child2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            padding: 1.5rem;
+            margin: 10px;
+            width: 500px;
+            /* height: 300px; */
+            background-color: #e2dfdc;
+            border-radius: 50px;
+            transition: 0.5s;
+            text-decoration: none;
+            color: #000000;
+            background: rgba(255, 255, 255, 0.129);
+            /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+            backdrop-filter: blur(70px);
+            -webkit-backdrop-filter: blur(4.5px);
+        }
+
+        .child svg {
+            width: 150px;
+            transition: 0.2s;
+        }
+
+        .child:hover {
+            background-color: #b8b8b826;
         }
 
         .child:hover h1 {
-            color: #3dbd99;
+            color: #ffffff;
             transition: 0.2s;
         }
 
         .child i {
             font-size: 100px;
             transition: 0.2s;
+
         }
 
         .child h1 {
-            font-size: 30px;
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+
+        .child2:hover {
+            cursor: pointer;
+            background-color: #74747408;
+        }
+
+        .child2:hover i {
+            color: #3dbd99;
+
+        }
+
+        .child2:hover h1 {
+            /* color: #3dbd99; */
+            transition: 0.2s;
+        }
+
+        .child2 i {
+            font-size: 100px;
+            transition: 0.2s;
+        }
+
+        .child2 h1 {
+            font-size: 20px;
+            color: #f6f4f2;
+            font-weight: 400;
+        }
+
+        .smallchild {
+            margin: 0px;
+            width: 150px;
+            height: 150px;
+            transform: scale(0.8);
+            padding: 0px;
+        }
+
+        .smallchild:hover
+        {
+            background-color: #00000000;
+        }
+        
+        .smallchild:hover svg{
+            transform: scale(1.1);
+            background-color: #b8b8b800;
         }
     </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#app").click(function () {
+                $(".main2").slideToggle();
+                $(".child").toggleClass("smallchild");
+                // $("body").toggleClass("smallchild");
+            });
+        });
+
+        $(document).mouseup(function (e) {
+            if ($(e.target).closest(".child").length
+                        === 0) {
+                $(".child").toggleClass("smallchild");
+                $(".main2").slideToggle();
+            }
+        });
+    </script>
+
+
+
 </head>
 
 <body>
@@ -73,17 +186,119 @@
 
         <a href="cms.html">
             <div class="child">
-                <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                <!-- <i class="fa fa-bar-chart" aria-hidden="true"></i> -->
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150"
+                    height="150" viewBox="0 0 120 120" id="stocks">
+                    <defs>
+                        <linearGradient id="c" x1="50%" x2="50%" y1="0%" y2="100%">
+                            <stop offset="0%" stop-color="#EEE" stop-opacity=".3"></stop>
+                            <stop offset="100%" stop-color="#D8D8D8" stop-opacity="0"></stop>
+                        </linearGradient>
+                        <circle id="d" cx="98" cy="39" r="6"></circle>
+                        <rect id="a" width="120" height="120" x="0" y="0" rx="28"></rect>
+                    </defs>
+                    <g fill="none" fill-rule="evenodd">
+                        <mask id="b" fill="#fff">
+                            <use xlink:href="#a"></use>
+                        </mask>
+                        <use fill="#1C181B" xlink:href="#a"></use>
+                        <g mask="url(#b)">
+                            <g transform="translate(-19)">
+                                <g transform="translate(36)">
+                                    <path fill="#3C3A3E" d="M0 0h3v120H0zM20 0h3v120h-3zM40 0h3v120h-3zM81 0h3v120h-3z">
+                                    </path>
+                                    <path fill="#00B0FC" d="M60 0h3v120h-3z"></path>
+                                </g>
+                                <path fill="url(#c)" stroke="#FFF" stroke-width="2"
+                                    d="M19 65.5h5.5L38 73l13.5-10.5L58 69l6.5-18 6 18 6.5 6.5 8.5-13 6.5-3L98 39l7.5 18.25 5.5-4.75 7.5 16.5 6.5-16.5 17-16 9.5 96H0l8.5-67z">
+                                </path>
+                                <use fill="#00B3F9" xlink:href="#d"></use>
+                                <circle cx="98" cy="39" r="6.5" stroke="#1C181B"></circle>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
                 <h1>CZ CMS</h1>
             </div>
         </a>
-        <a href="app.html">
-            <div class="child">
-                <i class="fa fa-mobile-phone"></i>
-                <h1>CZ Mobile App</h1>
+        <!-- <a href="app.html"> -->
+        <div class="child" id="app">
+            <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 120 120" id="my-shortcuts">
+                <defs>
+                    <radialGradient id="a" cx="-3551.47" cy="74.4" r="74.56"
+                        gradientTransform="matrix(-1 0 0 1 -3458.42 0)" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#1f7df1"></stop>
+                        <stop offset=".73" stop-color="#1f7df1" stop-opacity="0"></stop>
+                    </radialGradient>
+                    <radialGradient id="b" cx="60" cy="-6856.91" r="58.46"
+                        gradientTransform="matrix(-.54 -.84 -1.13 .73 -7682.19 5161.92)" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#4dc2a1"></stop>
+                        <stop offset=".27" stop-color="#4dc2a1" stop-opacity=".67"></stop>
+                        <stop offset=".58" stop-color="#4dc2a1" stop-opacity=".31"></stop>
+                        <stop offset=".81" stop-color="#4dc2a1" stop-opacity=".09"></stop>
+                        <stop offset=".93" stop-color="#4dc2a1" stop-opacity="0"></stop>
+                    </radialGradient>
+                    <radialGradient id="c" cx="26.95" cy="-6861.82" r="74.56"
+                        gradientTransform="matrix(1 0 0 -1 0 -6817.34)" gradientUnits="userSpaceOnUse">
+                        <stop offset=".17" stop-color="#f05e56"></stop>
+                        <stop offset=".22" stop-color="#f05e56" stop-opacity=".96"></stop>
+                        <stop offset=".31" stop-color="#f05e56" stop-opacity=".84"></stop>
+                        <stop offset=".42" stop-color="#f05e56" stop-opacity=".65"></stop>
+                        <stop offset=".56" stop-color="#f05e56" stop-opacity=".38"></stop>
+                        <stop offset=".72" stop-color="#f05e56" stop-opacity=".04"></stop>
+                        <stop offset=".74" stop-color="#f05e56" stop-opacity="0"></stop>
+                    </radialGradient>
+                    <radialGradient id="d" cx="-3518.42" cy="79.31" r="58.46"
+                        gradientTransform="matrix(.54 .84 1.13 -.73 1875.9 3032.81)" gradientUnits="userSpaceOnUse">
+                        <stop offset="0" stop-color="#ea66cb"></stop>
+                        <stop offset=".02" stop-color="#ea66cb" stop-opacity=".96"></stop>
+                        <stop offset=".16" stop-color="#ea66cb" stop-opacity=".71"></stop>
+                        <stop offset=".29" stop-color="#ea66cb" stop-opacity=".49"></stop>
+                        <stop offset=".43" stop-color="#ea66cb" stop-opacity=".32"></stop>
+                        <stop offset=".56" stop-color="#ea66cb" stop-opacity=".18"></stop>
+                        <stop offset=".68" stop-color="#ea66cb" stop-opacity=".08"></stop>
+                        <stop offset=".8" stop-color="#ea66cb" stop-opacity=".02"></stop>
+                        <stop offset=".9" stop-color="#ea66cb" stop-opacity="0"></stop>
+                    </radialGradient>
+                </defs>
+                <rect width="120" height="120" fill="#1e265a" rx="26"></rect>
+                <path fill="url(#a)"
+                    d="M93.81 80.16 70.07 99.38a16 16 0 0 1-20.14 0L26.19 80.16a8 8 0 0 1 0-12.44l23.74-19.23a16 16 0 0 1 20.14 0l23.74 19.23a8 8 0 0 1 0 12.44Z">
+                </path>
+                <path fill="url(#b)"
+                    d="m26.19 67.72 23.74-19.23a16 16 0 0 1 20.14 0l23.74 19.23a8 8 0 0 1 0 12.44L70.07 99.38a16 16 0 0 1-20.14 0L26.19 80.16a8 8 0 0 1 0-12.44Z">
+                </path>
+                <path fill="url(#c)"
+                    d="m26.19 38.72 23.74-19.23a16 16 0 0 1 20.14 0l23.74 19.23a8 8 0 0 1 0 12.44L70.07 70.38a16 16 0 0 1-20.14 0L26.19 51.16a8 8 0 0 1 0-12.44Z">
+                </path>
+                <path fill="url(#d)"
+                    d="M93.81 51.16 70.07 70.38a16 16 0 0 1-20.14 0L26.19 51.16a8 8 0 0 1 0-12.44l23.74-19.23a16 16 0 0 1 20.14 0l23.74 19.23a8 8 0 0 1 0 12.44Z">
+                </path>
+            </svg>
+            <!-- <i class="fa fa-mobile-phone"></i> -->
+            <h1>CZ Mobile App</h1>
+        </div>
+        <!-- </a> -->
+
+    </div>
+
+    <div class="main2">
+
+        <a href="regressiontesting.html">
+            <div class="child2" id="c1">
+                <h1>Regression Testing & Charger Simulation</h1>
             </div>
         </a>
+
+        <a href="module.html">
+            <div class="child2" id="c2">
+                <h1>Module wise Tesing</h1>
+            </div>
+        </a>
+
     </div>
+
+
 </body>
 
 </html>

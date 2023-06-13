@@ -10,123 +10,171 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
+
 <style>
-*
-{
-    font-family: 'Roboto', sans-serif;
-}
+  * {
+      font-family: 'Roboto', sans-serif;
+  }
 
-body {
-font-family: 'Roboto', sans-serif;
-}
+  body {
+      font-family: 'Roboto', sans-serif;
+      background-image: url(bg.jpg);
+      background-size: 100%;
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+  }
 
-/* Fixed sidenav, full height */
-.sidenav {
-  height: 100%;
-  width: 290px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 20px;
-  padding: 5px;
-}
+  /* Fixed sidenav, full height */
+  .sidenav {
+      height: 100%;
+      width: auto;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.129);
+      /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+      backdrop-filter: blur(50px);
+      -webkit-backdrop-filter: blur(4.5px);
+      overflow-x: hidden;
+      padding-top: 20px;
+      padding: 10px;
+      margin-left: 10px;
+      height: auto;
+      margin-top: 10px;
+      border-radius: 30px;
+      transition: 0.3s;
+  }
 
-/* Style the sidenav links and the dropdown button */
-.sidenav a, .dropdown-btn {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 16px;
-  color: #e1e1e1;
-  display: block;
-  border: none;
-  background: none;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
-  padding: 1rem 1rem;
-  margin: 0.2rem;
-}
+  /* Style the sidenav links and the dropdown button */
+  .sidenav a,
+  .dropdown-btn {
+      /* padding: 6px 8px 6px 16px; */
+      text-decoration: none;
+      font-size: 16px;
+      color: #e1e1e1;
+      display: block;
+      border: none;
+      background: none;
+      width: 200PX;
+      text-align: left;
+      cursor: pointer;
+      outline: none;
+      padding: 1rem 1rem;
+      transition: 0.3s;
+      font-weight: 400;
+      border-radius: 10px;
+      margin-top: 5px;
+  }
 
-/* On mouse-over */
-.sidenav a:hover, .dropdown-btn:hover {
-  color: #3dbd99;
-  background-color: #262626;
-}
+  /* On mouse-over */
+  .sidenav a:hover,
+  .dropdown-btn:hover {
+      /* color: #3dbd99; */
+      background-color: #0000002c;
+      transition: 0.3s;
+  }
 
-/* Main content */
-.main { 
-  margin-left: 300px; /* Same as the width of the sidenav */
-  font-size: 20px; /* Increased text to enable scrolling */
-  padding: 0px 0px;
-}
+  /* Main content */
+  .main {
+      margin-left: 280px;
+      /* Same as the width of the sidenav */
+      font-size: 20px;
+      /* Increased text to enable scrolling */
+      padding: 0px 0px;
+      transition: 0.2s;
+      border-radius: 30px;
+      overflow: hidden;
+      height: 49vw;
+  }
 
-/* Add an active class to the active dropdown button */
-.active {
-    background-color: #262626;
-  color: white;
-}
+  .main iframe
+  {
+      height: 100%;
+  }
 
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
-.dropdown-container {
-  display: none;
-  background-color: #262626;
-  padding-left: 8px;
-}
+  /* Add an active class to the active dropdown button */
+  .active {
+      background-color: #0000002c;
+      color: white;
+      transition: 0.3s;
+  }
 
-/* Optional: Style the caret down icon */
-.fa-caret-down {
-  float: right;
-  padding-right: 8px;
-}
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+      display: none;
+      background-color: #0000002c;
+      padding-left: 0px;
+      transition: 0.3s;
+      border-radius: 10px;
+      margin-top: 5px;
+      padding: 5px;
+      margin-bottom: 5px;
+  }
 
-/* Some media queries for responsiveness */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+      float: right;
+      padding-right: 8px;
+      transition: 0.3s;
+  }
 
-.logo
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: aliceblue;
-}
+  /* Some media queries for responsiveness */
+  @media screen and (max-height: 450px) {
+      .sidenav {
+          padding-top: 15px;
+      }
 
-.logo h1
-{
-    margin-right: 10px;
-    font-size: 25px;
-    color: #3dbd99;
-}
+      .sidenav a {
+          font-size: 18px;
+      }
+  }
 
-.logo p
-{
-    margin-right: 10px;
-    font-size: 20px;
-    color: #ffffff;
-}
+  .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: aliceblue;
+  }
 
-.back
-{
-    padding: 10px;
-    border-radius: 10px;
-    color: #ffffff;
-}
+  .logo h1 {
+      margin-right: 10px;
+      font-size: 25px;
+      color: #3dbd99;
+  }
 
+  .logo p {
+      margin-right: 10px;
+      font-size: 20px;
+      color: #ffffff;
+  }
+
+  .back {
+      padding: 10px;
+      border-radius: 10px;
+      color: #ffffff;
+  }
 </style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".main").hover(function () {
+            $(".sidenav").css({"left":"-200px"});
+            $(".main").css({"margin-left":"80px"});
+        });
+        $(".sidenav").hover(function () {
+            $(".sidenav").css({"left":"10px"});
+            $(".main").css({"margin-left":"280px"});
+        });
+    });
+</script>
+
 </head>
 <body>
 
 <div class="sidenav">
-    <a href="app.html" class="back"><i class="fa fa-arrow-left" aria-hidden="true" style="margin-right: 5px;"></i>Back</a>
-    <div class="logo">
-       <h1>Regression Testing</h1> 
-    </div>
+    <a href="index.html" class="back"><i class="fa fa-arrow-left" aria-hidden="true" style="margin-right: 5px;"></i>Back</a>
   <a data-src="https://docs.google.com/spreadsheets/d/14kwMnyJsyXdEGmT_ByBzufem7S7XH44Cml9PxfxvSR8/edit?usp=drive_link">Station Search by QR Code</a>
   <a data-src="https://docs.google.com/spreadsheets/d/1mdnkIDSoRM1NqiVPx-h_PkUhUaVqf1RQ6F1UnKwF3Ng/edit?usp=drive_link">Station Search by Search Icon</a>
   <a data-src="https://docs.google.com/spreadsheets/d/15ytgME4N6yzYNF4iFqpdNbgJfN8z94MOBjw6dwIXJ0c/edit?usp=drive_link">Station Search by MAP</a>
